@@ -17,17 +17,12 @@
         - ```Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux```
 - Install *Ubuntu 18.04 LTS* from the Microsoft Store
     - You will be asked for a Username and Password; this does not need to be the same as your Windows username/password
-- Install [Visual Studio Code](https://code.visualstudio.com/)
-- Connect VSCode to WSL
-    - Open Ubuntu and run the command
-        - ```code .```
 
 ## Install AWS Command Line Tool and Terraform
 
 - Open (WSL) Ubuntu - or your command prompt on Linux/Mac
-- Add pip3 and unzip
+- Add unzip
     - ```sudo apt install unzip```
-    - ```sudo apt install python3-pip```
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)
     - ```curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"```
     - ```unzip awscliv2.zip```
@@ -52,21 +47,18 @@
 - Click the *My Classrooms* link
 - Click the *Go to classroom* button alongside your desired classroom
 - Under the *Your AWS Account Status* area, click the *Account Details* button
-- Show the *AWS CLI* information - copy this into your *~/.aws/credentials* file
+- ### Show the *AWS CLI* information - copy this into your *~/.aws/credentials* file
 - Click the *AWS Console* button to log into the console.
 
-## Terraform Infrastructure and Bastion Server 
+## Terraform Infrastructure
 
 - ```mkdir ~/GitRepos```
 - ```cd ~/GitRepos```
 - ```git clone https://github.com/michaelkemp/aws-educate-test.git```
 - ```cd aws-educate-test```
-- ```code .```
-
-- To *Terraform* the Infrastructure
-    - ```cd ~/GitRepos/aws-educate-test```
-    - ```terraform init```
-    - ```terraform apply```
-    - Accept the changes ```yes```
-    - Once you are finished, you can use ```terraform destroy``` to remove the infrastructure.
+- ```terraform init```
+- ```terraform apply```
+- Accept the changes ```yes```
+- This will take a few minutes, but you should see the infrastructure appear in the AWS Console.
+- Once you are finished, you can use ```terraform destroy``` to remove the infrastructure.
 
