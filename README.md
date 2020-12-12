@@ -47,6 +47,9 @@
 - Click the *Go to classroom* button alongside your desired classroom
 - Under the *Your AWS Account Status* area, click the *Account Details* button
 - Show the *AWS CLI* information - copy this into your *~/.aws/credentials* file
+    - Open WSL
+    - ```mkdir ~/.aws```
+    - ```vim ~/.aws/credentials```
 - Click the *AWS Console* button to log into the console.
 
 ## Terraform Infrastructure
