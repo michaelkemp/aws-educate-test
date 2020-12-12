@@ -50,6 +50,13 @@
     - Open WSL
     - ```mkdir ~/.aws```
     - ```vim ~/.aws/credentials```
+        - ```
+            [default]
+            aws_access_key_id=QWERTYUIOPASDFGHJKL
+            aws_secret_access_key=tHisIsnOtanActUal/Key
+            aws_session_token=Vy0suaL4NT1PrSLaPLZAT8fgbNpwhw07ByUvBZ6F0BSITkbUyrIOFUdQu6HDYVhskoQt4OGvTzi0PdLQwvI8FNnMrkESlFxeLSxVy0suaL4NT1PrSLaPLZAT8fgbNpwhw07ByUvBZ6F0BSITkbUyrIOFUdQu6HDYVhskoQt4OGvTzi0PdLQwvI8FNnMrkESlFxeLSxVy0suaL4NT1PrSLaPLZAT8fgbNpwhw07ByUvBZ6F0BSITkbUyrIOFUdQu6HDYVhskoQt4OGvTzi0PdLQwvI8FNnMrkESlFxeLSx
+        ```
+
 - Click the *AWS Console* button to log into the console.
     - At the top right; ensure the region you are in si *N. Virginia*
 
