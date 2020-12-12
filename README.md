@@ -51,6 +51,7 @@
     - ```mkdir ~/.aws```
     - ```vim ~/.aws/credentials```
 - Click the *AWS Console* button to log into the console.
+    - At the top right; ensure the region you are in si *N. Virginia*
 
 ## Terraform Infrastructure
 
