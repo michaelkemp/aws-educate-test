@@ -13,8 +13,6 @@
 ## Setting Up Windows with Windows Subsystem for Linux (WSL)
 
 - Enable [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-    - Open PowerShell as Administrator and run
-        - ```Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux```
 - Install *Ubuntu 18.04 LTS* from the Microsoft Store
     - You will be asked for a Username and Password; this does not need to be the same as your Windows username/password
 
@@ -22,7 +20,7 @@
 
 - Open (WSL) Ubuntu - or your command prompt on Linux/Mac
 - Add unzip
-    - ```sudo apt install unzip```
+    - ```sudo apt install unzip -y```
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)
     - ```curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"```
     - ```unzip awscliv2.zip```
@@ -38,7 +36,8 @@
 - Install [Terraform](https://www.terraform.io/downloads.html)
     - ```curl "https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip" -o "terraform.zip"```
     - ```unzip terraform.zip```
-    - ```mv terraform .local/bin/terraform```
+    - ```mkdir -p ~/.local/bin```
+    - ```mv terraform ~/.local/bin/terraform```
     - ```terraform --version```
 
 ## Logging in to AWS Educate
@@ -47,7 +46,7 @@
 - Click the *My Classrooms* link
 - Click the *Go to classroom* button alongside your desired classroom
 - Under the *Your AWS Account Status* area, click the *Account Details* button
-- ### Show the *AWS CLI* information - copy this into your *~/.aws/credentials* file
+- Show the *AWS CLI* information - copy this into your *~/.aws/credentials* file
 - Click the *AWS Console* button to log into the console.
 
 ## Terraform Infrastructure
@@ -59,6 +58,7 @@
 - ```terraform init```
 - ```terraform apply```
 - Accept the changes ```yes```
+- If Terraform complains about credentials, go back to the *Logging in to AWS Educate* section and re-create your ~/.aws/credentials file
 - This will take a few minutes, but you should see the infrastructure appear in the AWS Console.
 - Once you are finished, you can use ```terraform destroy``` to remove the infrastructure.
 
