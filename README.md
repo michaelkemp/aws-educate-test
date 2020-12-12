@@ -73,5 +73,7 @@
         - ```exit```
     - use the tunnel script to log into the private linux instance via the NAT
         - ```ssh -f -i my-key.pem ec2-user@123.123.123.123 -L 10000:172.31.129.100:22 sleep 5; ssh -i my-key.pem -p 10000 ec2-user@127.0.0.1```
+    - check that NAT is setup correctly
+        - ```ping google.com```
 - Once you are finished, you can use ```terraform destroy``` to remove the infrastructure.
 
