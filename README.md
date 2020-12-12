@@ -64,5 +64,14 @@
 - Accept the changes ```yes```
 - If Terraform complains about credentials, go back to the *Logging in to AWS Educate* section and re-create your ~/.aws/credentials file
 - This will take a few minutes, but you should see the infrastructure appear in the AWS Console.
+- The output from the terraform will give you details for logging in to the NAT Instance and the Linux Instance
+    - chmod the PEM file
+        - ```chmod 400 my-key.pem```
+    - ssh into the NAT instance
+        - ```ssh -i my-key.pem ec2-user@123.123.123.123```
+    - log out of the NAT instance
+        - ```exit```
+    - use the tunnel script to log into the private linux instance via the NAT
+        - ```ssh -f -i my-key.pem ec2-user@123.123.123.123 -L 10000:172.31.129.100:22 sleep 5; ssh -i my-key.pem -p 10000 ec2-user@127.0.0.1```
 - Once you are finished, you can use ```terraform destroy``` to remove the infrastructure.
 
