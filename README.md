@@ -34,7 +34,7 @@
             fi
         source .bashrc
 - Install [Terraform](https://www.terraform.io/downloads.html)
-    - ```curl "https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip" -o "terraform.zip"```
+    - ```curl "https://releases.hashicorp.com/terraform/0.14.2/terraform_0.14.2_linux_amd64.zip" -o "terraform.zip"```
     - ```unzip terraform.zip```
     - ```mkdir -p ~/.local/bin```
     - ```mv terraform ~/.local/bin/terraform```

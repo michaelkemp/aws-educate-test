@@ -1,5 +1,11 @@
-terraform.tfstate
-.terraform/
-**/*tfplan
-*terraform.tfstate*.backup
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+*.tfvars
 *.pem
+.vscode
+.logs*
+.log*
+.plan*
+*.zip
